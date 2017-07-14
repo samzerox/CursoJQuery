@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Leccion 02 - Selectores y Encadenamiento</title>
+
+<!-- Importacion de jQuery -->
+	<script src="js/lib/jquery-3.2.1.min.js"></script>
+
+	<!-- Importacion de CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<style>
+		
+		img{
+			width: 200px;
+			height: 200px;
+		}
+
+		hr{
+			margin-bottom: 60px;
+		}
+
+		.morado{
+			color: purple;
+		}
+
+		.rojo{
+			color: red;
+		}
+
+		.azul{
+			color: blue;
+		}
+
+		.verde{
+			color: green;
+		}
+
+		.naranja{
+			color: orange;
+		}
+
+	</style>
+
+</head>
+<body>
+
+<div class="container">
+	<h1>Selectores y Encadenamiento</h1>
+	<hr>
+
+	<div class="row">
+		
+		<div class="col-sm-4 text-center">
+			<img src="img/nophoto.jpg">
+			<h4>Sam Alcaraz</h4>
+		</div>
+		<div class="col-sm-5">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore.
+			</p>
+		</div>
+
+		<div class="col-sm-3">
+			<ul>
+				<li>Matematicas</li>
+				<li>Programacion</li>
+				<li>Analisis</li>
+				<li>Fisica</li>
+				<li>Geografia</li>
+			</ul>
+		</div>
+
+	</div>
+
+
+
+
+<script>
+	
+//Manejo de las imagenes
+	$("img")
+		.attr("src","img/sam.jpg")
+		.addClass('img-circle img-thumbnail');
+
+
+	//Modificaciones al segundo bloque
+	$(".col-sm-5")
+		.find("p")
+		//.text("Saludos, soy <u>sam</u>.");
+		.html("Saludos, soy <u>sam</u>.");	
+
+
+
+
+	//referencia a la lista ordenada
+	$("ul li")
+		.eq(0).addClass("morado").end()
+		.eq(1).addClass("rojo").end()
+		.eq(2).addClass("azul").end()
+		.eq(3).addClass("verde").end()
+		.eq(4).addClass("naranja").end();
+
+	
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

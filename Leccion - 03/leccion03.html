@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Leccion 03: Eventos</title>
+
+<!-- Importacion de jQuery -->
+	<script src="js/lib/jquery-3.2.1.min.js"></script>
+
+	<!-- Importacion de CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<style>
+		.img100{
+			height: 100px;
+			width: 100px;
+		}
+
+		.divRojo{
+			background-color: red;
+			height: 100px;
+			width: 100px;
+
+		}
+	</style>
+
+	
+</head>
+<body>
+
+
+<div class="container">
+	<h1>Leccion 03: Eventos</h1>
+	<hr>
+
+	<button id="bot1" class="btn btn-primary"> evento click</button>
+
+	<br><br>
+
+	<img src="img/sam.jpg" class="img100">
+
+	<br><br>
+
+	<div class="divRojo">
+		
+	</div>
+
+	<br><br>
+
+	<a id="linkUdemy" href="http://udemy.com">Ir a Udemy</a>
+
+	<br><br>
+
+
+
+
+
+</div>
+
+<script>
+	
+	$("#bot1").on("click",function(){
+
+
+		console.log("Click");
+
+	});
+
+	//evento mouse enter
+	$(".img100").on("mouseenter",function(){
+		$(this).attr("src","img/nophoto.jpg");
+	});
+
+	$(".img100").on("mouseleave",function(){
+		$(this).attr("src","img/sam.jpg");
+
+	});
+
+
+	$(".divRojo").on("click",function(){
+		console.log("click en el divRojo");
+	});
+
+
+
+	//controles especiales para link
+	$("#linkUdemy").on('click',function(e){
+		e.preventDefault();
+		console.log("click en el link...");
+
+		var link = $(this).attr("href");
+
+		console.log(link);
+
+		window.location = link;
+	});
+
+
+
+	$(document).ready(function(){
+		console.log(" La pagina esta lista")
+	});
+
+
+</script>
+
+
+
+
+</body>
+</html>

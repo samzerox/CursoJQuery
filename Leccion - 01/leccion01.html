@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Leccion 01 - Bootstrap</title>
+
+<!-- Importacion de jQuery -->
+	<script src="js/lib/jquery-3.2.1.min.js"></script>
+
+	<!-- Importacion de CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<style>
+		.textoVerde{
+			color:green;
+		}
+	</style>
+
+
+	<!-- <script>
+		$(document).ready(function(){
+			$('ul').addClass('textoVerde');
+		});
+	</script> -->
+
+	<!-- <script>
+		$(function(){
+			$('ul').addClass('textoVerde');
+		});
+	</script> -->
+	<script>
+		$(function(){
+			$('li:first-child').addClass('textoVerde');
+			$('li:nth-child(2)').addClass('textoVerde');
+			$('li:last-child').addClass('textoVerde');
+		});
+	</script>
+
+</head>
+<body>
+
+<div class="container">
+	<h1>Leccion 01</h1>
+	<hr>
+
+
+	<ul>
+		<li><span class="label label-primary">Hola 1</span></li>
+		<li>Hola 2</li>
+		<li>Hola 3</li>
+	</ul>
+
+	<ul>
+		<li>Negrita</li>
+		<li>Negrita</li>
+		<li>Negrita</li>
+	</ul>
+</div>
+
+<script>
+	
+// jQuery('ul').css('color','red');
+// jQuery('ul').addClass('textoVerde');
+// $('ul').addClass('textoVerde'); //es lo mismo que el de arriba
+// jQuery('li').css('font-weight','bold');
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

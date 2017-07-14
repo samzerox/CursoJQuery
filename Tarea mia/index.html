@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Notification</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+
+	<script src="js/lib/TweenMax.min.js"></script>
+	
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Importacion de Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+
+	<!-- Importacion de Style -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Importacion de notificacion JS -->
+	<script src="js/notificacion.js"></script>
+
+
+</head>
+<body>
+
+<div class="container">
+	
+	<h1>Notification</h1>
+	<hr>
+
+
+</div>
+
+<div class="container page_header">
+	<button id="bot1" class="btn btn-primary">Basica!</button>
+	<button id="bot2" class="btn btn-primary">Sin Imagen</button>
+</div>
+
+
+
+<script>
+	$(document).ready(function(){
+		$("#bot1").on("click", function(){
+			$.notificacion({
+				color: "green",
+				img: "img/photo.jpg",
+				titulo:"My Wife",
+				subtitulo: "Juarez N.L."
+			});
+		});
+
+		$("#bot2").on("click", function(){
+			$.notificacion({
+				color: "green",
+				titulo:"My Wife",
+				subtitulo: "Juarez N.L."
+			});
+		});
+	});
+</script>
+
+
+
+</body>
+</html>

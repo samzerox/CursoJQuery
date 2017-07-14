@@ -1,0 +1,57 @@
+.sb-topright{
+	position: fixed;
+	top: 10px;
+	right: 10px;
+}
+
+.notificacion-contenedor{
+	/*position: fixed;*/  /*Quite este para que se apilaran porque salian unos encima de otros*/
+
+	display: block;  /*Agregure este para que funcionara y se pusieran uno abajo del otro*/
+
+	margin-top: 10px;
+	
+
+	width: 325px;
+	height: 85px;
+	
+}
+
+.notificacion-foto img{
+	float: left;
+	width: 	85px;
+	height: 85px;
+	
+}
+
+.notificacion-datos{
+	display: block;
+	float: left;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+.notificacion-datos span{
+
+	display: block;
+
+}
+
+.notificacion-titulo{
+	color: white;
+	font-size: 18px;
+}
+
+.notificacion-subtitulo{
+	color: #e0e0e0;
+	font-size: 16;
+}
+
+.notificacion-icono{
+	float: right;
+	padding-right: 30px;
+	padding-top: 25px;
+	color: white;
+}
+
+
